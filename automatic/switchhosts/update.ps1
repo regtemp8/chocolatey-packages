@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "SwitchHosts_windows_installer_4.1.2.6086.exe"
+    $re  = "SwitchHosts_windows_installer_.+.exe"
 
     $url = $assets_page.Links.Href -match $re | select -First 1
 
