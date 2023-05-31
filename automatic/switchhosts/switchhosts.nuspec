@@ -13,7 +13,7 @@
 SwitchHosts is an App for hosts management and switching.
 It is a free and open source software.
     </description>
-    <projectUrl>https://swh.app/</projectUrl>
+    <projectUrl>https://switchhosts.vercel.app/</projectUrl>
     <tags>electron hosts hostsfile hostseditor switch-hosts switchhosts</tags>
     <iconUrl>https://rawcdn.githack.com/oldj/SwitchHosts/cd27432c23331fcc84a6f55c8c7a3ed0999a46ed/assets/app.svg</iconUrl>
     <copyright>Apache License 2.0</copyright>
