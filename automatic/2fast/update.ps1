@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "Project2FA.UWP_.+_Store_Installer.zip"
+    $re  = "Project2FA.UWP_.+.zip"
 
     $url = $assets_page.Links.Href -match $re | select -First 1
 
