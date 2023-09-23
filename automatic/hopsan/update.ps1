@@ -6,8 +6,6 @@ function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
             "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
             "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
      }
@@ -20,16 +18,15 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "Hopsan-.+-win(32|64)-with_compiler-installer.exe"
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
+    $re  = "Hopsan-.+-win64-with_compiler-installer.exe"
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = ($url[0] -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
+    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
 
-    $url32 = 'https://github.com' + $url[0]
-    $url64 = 'https://github.com' + $url[1]
+    $url64 = 'https://github.com' + $url
 
-    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    $Latest = @{ URL64 = $url64; Version = $version }
     return $Latest
 }
 
-update
+update -ChecksumFor 64
