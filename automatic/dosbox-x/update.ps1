@@ -21,9 +21,9 @@ function global:au_GetLatest {
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
     $re  = "dosbox-x-win(32|64)-.+-setup.exe$"
-    $url = $assets_page.Links.Href -match $re | select -First 2
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
 
-    $version = (($url[0] -split '/' | select -Last 1 -Skip 1) -split '-' | select -Last 1) -replace 'v',''
+    $version = (($url[0] -split '/' | Select-Object -Last 1 -Skip 1) -split '-' | Select-Object -Last 1) -replace 'v',''
     $url32 = 'https://github.com' + $url[0]
     $url64 = 'https://github.com' + $url[1]
 

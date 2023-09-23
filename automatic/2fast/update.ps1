@@ -20,9 +20,9 @@ function global:au_GetLatest {
 
     $re  = "Project2FA.UWP_.+.zip"
 
-    $url = $assets_page.Links.Href -match $re | select -First 1
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = ($url -split '/' | select -Last 1 -Skip 1) -replace 'v',''
+    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
     $url64 = 'https://github.com' + $url
 
     $Latest = @{ URL64 = $url64; Version = $version }

@@ -17,9 +17,9 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re  = "hakuneko-desktop_.+_windows-setup_(i386|amd64).exe"
-    $url = $download_page.links | ? href -match $re | select -First 2 -expand href
+    $url = $download_page.links | Where-Object href -match $re | Select-Object -First 2 -expand href
 
-    $version = $url[0] -split '_' | select -First 1 -Skip 1
+    $version = $url[0] -split '_' | Select-Object -First 1 -Skip 1
     $url64 = $url[0]
     $url32 = $url[1]
 

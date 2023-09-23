@@ -18,9 +18,9 @@ function global:au_GetLatest {
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
     $re  = "TVRename-[0-9]+\.[0-9]+\.[0-9]+.exe"
-    $url = $assets_page.Links.Href -match $re | select -First 1
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = $url -split '/' | select -Last 1 -Skip 1
+    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
     $url = 'https://github.com' + $url
 
     $Latest = @{ URL32 = $url; Version = $version }

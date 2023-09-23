@@ -22,9 +22,9 @@ function global:au_GetLatest {
 
     $re  = "qrcp_.+_Windows_(x86_64|i386).tar.gz"
 
-    $url = $assets_page.Links.Href -match $re | select -First 2
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
 
-    $version = $url[0] -split '/' | select -Last 1 -Skip 1
+    $version = $url[0] -split '/' | Select-Object -Last 1 -Skip 1
     $url32 = 'https://github.com' + $url[0]
     $url64 = 'https://github.com' + $url[1]
 

@@ -20,9 +20,9 @@ function global:au_GetLatest {
 
     $re  = "bsnes_hd_beta_.+_.+_windows.zip$"
 
-    $url = $assets_page.Links.Href -match $re | select -First 1
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = (($url -split '/' | select -Last 1 -Skip 1) -replace 'beta_','') -replace '_','.' -replace 'h.',''
+    $version = (($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'beta_','') -replace '_','.' -replace 'h.',''
     $url64 = 'https://github.com' + $url
 
     $Latest = @{ URL64 = $url64; Version = $version }

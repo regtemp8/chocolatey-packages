@@ -20,9 +20,9 @@ function global:au_GetLatest {
 
     $re  = "Rare-.+.msi"
 
-    $url = $assets_page.Links.Href -match $re | select -First 1
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = $url -split '/' | select -Last 1 -Skip 1
+    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
     if ($version.Contains("rc.")) { 
         $version = $version -replace 'rc.','rc'
     }
