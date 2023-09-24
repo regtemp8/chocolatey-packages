@@ -20,9 +20,9 @@ FanFicFare was previously known as FanFictionDownLoader (AKA FFDL, AKA fanficdow
     <copyright> Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://github.com/JimmXinu/FanFicFare/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="calibre" version="[2.0.0,)" />
+    </dependencies>
     <releaseNotes>[Release Notes](https://github.com/JimmXinu/FanFicFare/releases)</releaseNotes>
     <docsUrl>https://github.com/JimmXinu/FanFicFare/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/JimmXinu/FanFicFare/issues</bugTrackerUrl>
