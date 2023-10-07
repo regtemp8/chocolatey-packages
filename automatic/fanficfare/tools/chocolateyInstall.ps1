@@ -12,7 +12,6 @@ $packageArgs = @{
   fileFullPath   = Join-Path (Split-Path $MyInvocation.MyCommand.Definition) "FanFicFarePlugin.zip"
   validExitCodes = @(0)
 }
-Get-ChocolateyWebFile @packageArgs
 
 if (Get-Command "calibre-customize.exe" -ErrorAction SilentlyContinue) {
   $pinfo                        = New-Object System.Diagnostics.ProcessStartInfo
