@@ -25,7 +25,7 @@ function global:au_GetLatest {
     $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
     $url64 = 'https://github.com' + $url
 
-    $Latest = @{ URL64 = $url64; Version = $version }
+    $Latest = @{ URL64 = $url64; Version = '7.16.0.20231228' }
     return $Latest
 }
 
