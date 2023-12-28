@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/ciderapp/cider-releases/releases'
+$releases = 'https://github.com/ciderapp/Cider/releases'
 
 function global:au_SearchReplace {
     @{
@@ -19,10 +19,10 @@ function global:au_GetLatest {
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
     $re = "Cider-Setup-.+"
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = ($url[0] -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
-    $url32 = 'https://github.com' + $url[0]
+    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
+    $url32 = 'https://github.com' + $url
 
     $Latest = @{ URL32 = $url32; Version = $version }
     return $Latest

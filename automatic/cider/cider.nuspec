@@ -18,7 +18,7 @@ A new cross-platform Apple Music experience based on Electron and Vue.js written
     <copyright>GNU Affero General Public License v3.0</copyright>
     <licenseUrl>https://github.com/ciderapp/Cider/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>[Package Release Notes](https://github.com/ciderapp/cider-releases/releases)</releaseNotes>
+    <releaseNotes>[Package Release Notes](https://github.com/ciderapp/Cider/releases)</releaseNotes>
     <docsUrl>https://docs.cider.sh/</docsUrl>
     <bugTrackerUrl>https://github.com/ciderapp/Cider/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/ciderapp/Cider</projectSourceUrl>
