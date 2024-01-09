@@ -4,14 +4,14 @@ import argparse
 
 
 message_for_one_version = """
-The latest version ({}) of #{} (@{}) is now available on @chocolateynuget {}
+The latest version ({}) of #{} {}is now available on @chocolateynuget {}
 
 {} #chocolatey
 {}
 """
 
 message_for_several_versions = """
-The latest versions ({}) of #{} (@{}) are now available on @chocolateynuget {}
+The latest versions ({}) of #{} {}are now available on @chocolateynuget {}
 
 {} #chocolatey
 {}
@@ -208,6 +208,17 @@ DATABASE = {
             "gameboycolor",
         ],
     },
+    "monitorian": {
+        "twitter_id": "",
+        "emojis": "🧑‍💻🖥️🔆🕶️",
+        "tags": [
+            "monitor",
+            "display",
+            "brightness",
+            "luminance",
+            "ddcci",
+        ],
+    },
     "rare": {
         "twitter_id": "legendary_gl",
         "emojis": "🎮🕹️👾",
@@ -269,7 +280,12 @@ class Package:
             exit(-1)
 
         self.name = name
-        self.twitter_id = DATABASE[name]["twitter_id"]
+
+        if DATABASE[name]["twitter_id"] != "":
+            self.twitter_id = "(@{}) ".format(DATABASE[name]["twitter_id"])
+        else:
+            self.twitter_id = ""
+
         self.version = str(version).strip("[]").replace("'", "")
         self.emojis = DATABASE[name]["emojis"]
         self.tags = "#" + " #".join(DATABASE[name]["tags"])
