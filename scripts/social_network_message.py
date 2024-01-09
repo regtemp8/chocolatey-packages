@@ -4,14 +4,14 @@ import argparse
 
 
 message_for_one_version = """
-The latest version ({}) of #{} ({}) is now available on @chocolateynuget {}
+The latest version ({}) of #{} (@{}) is now available on @chocolateynuget {}
 
 {} #chocolatey
 {}
 """
 
 message_for_several_versions = """
-The latest versions ({}) of #{} ({}) are now available on @chocolateynuget {}
+The latest versions ({}) of #{} (@{}) are now available on @chocolateynuget {}
 
 {} #chocolatey
 {}
@@ -19,7 +19,7 @@ The latest versions ({}) of #{} ({}) are now available on @chocolateynuget {}
 
 DATABASE = {
     "2fast": {
-        "twitter_id": "@jpweber8",
+        "twitter_id": "jpweber8",
         "emojis": "🔐🔑🪪",
         "tags": [
             "android",
@@ -41,7 +41,7 @@ DATABASE = {
         "tags": ["telegram", "desktop", "windows"],
     },
     "biglybt-no-java": {
-        "twitter_id": "@BiglyBT",
+        "twitter_id": "BiglyBT",
         "emojis": "🧑‍💻🖥️⬇️",
         "tags": [
             "torrent",
@@ -72,7 +72,7 @@ DATABASE = {
         ],
     },
     "cider": {
-        "twitter_id": "@UseCider",
+        "twitter_id": "UseCider",
         "emojis": "🎼🎵🎧🔊",
         "tags": [
             "electron",
@@ -92,12 +92,12 @@ DATABASE = {
         ],
     },
     "comictagger": {
-        "twitter_id": "@ComicTagger",
+        "twitter_id": "ComicTagger",
         "emojis": "🏷️",
         "tags": ["comics", "comic", "metadata", "tagging", "tagger"],
     },
     "conan": {
-        "twitter_id": "@conan_io",
+        "twitter_id": "conan_io",
         "emojis": "🐸🧑‍💻🖥️",
         "tags": [
             "conan",
@@ -126,12 +126,12 @@ DATABASE = {
         ],
     },
     "discord-history-tracker": {
-        "twitter_id": "@chylexmc",
+        "twitter_id": "chylexmc",
         "emojis": "📰🔍🕵️👾",
         "tags": ["javascript", "css", "discord", "bookmark"],
     },
     "hidhide": {
-        "twitter_id": "@NefariusMaximus",
+        "twitter_id": "NefariusMaximus",
         "emojis": "🖥️🎮🕹️👾",
         "tags": [
             "controller",
@@ -146,7 +146,7 @@ DATABASE = {
         ],
     },
     "internxt-drive": {
-        "twitter_id": "@Internxt",
+        "twitter_id": "Internxt",
         "emojis": "🧑‍💻🖥️🪙",
         "tags": [
             "windows",
@@ -161,7 +161,7 @@ DATABASE = {
         ],
     },
     "openproject": {
-        "twitter_id": "@openproject",
+        "twitter_id": "openproject",
         "emojis": "🖥️🕒🗓️⏳",
         "tags": [
             "project",
@@ -179,7 +179,7 @@ DATABASE = {
         ],
     },
     "phantombot": {
-        "twitter_id": "@PhantomBot",
+        "twitter_id": "PhantomBot",
         "emojis": "🖥️🎮🕹️👾",
         "tags": [
             "twitter",
@@ -196,8 +196,20 @@ DATABASE = {
             "bot",
         ],
     },
+    "mgba": {
+        "twitter_id": "mGBA_emu",
+        "emojis": "🖥️🎮🕹️👾",
+        "tags": [
+            "mgba",
+            "gba",
+            "gameboy",
+            "emulator",
+            "gameboyadvance",
+            "gameboycolor",
+        ],
+    },
     "rare": {
-        "twitter_id": "@legendary_gl",
+        "twitter_id": "legendary_gl",
         "emojis": "🎮🕹️👾",
         "tags": [
             "linux",
