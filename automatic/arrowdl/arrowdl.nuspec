@@ -4,7 +4,7 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>arrowdl</id>
-    <title>ArrowDL!</title>
+    <title>ArrowDL</title>
     <version>2.5.8</version>
     <authors>setvisible</authors>
     <owners>Xav83</owners>
