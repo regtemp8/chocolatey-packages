@@ -19,7 +19,7 @@
     <licenseUrl>https://github.com/setvisible/DownZemAll/blob/develop/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="arrowdl" version="4.0.0" />
+      <dependency id="arrowdl" version="4.0.1" />
     </dependencies>
     <releaseNotes>[Release Notes](https://github.com/setvisible/ArrowDL/releases)</releaseNotes>
     <docsUrl>https://www.arrow-dl.com/ArrowDL/category/tutorial.html</docsUrl>
