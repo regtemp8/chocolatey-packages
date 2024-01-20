@@ -13,3 +13,5 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 Install-ChocolateyPackage @packageArgs
+
+& "$env:ChocolateyInstall\tools\shimgen.exe" --output="$env:ChocolateyInstall\bin\crow.exe" --path="$env:Programfiles\Crow Translate\crow.exe"
