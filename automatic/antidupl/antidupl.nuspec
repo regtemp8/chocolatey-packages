@@ -28,11 +28,8 @@ It is simple to use, has high speed and accuracy of work, supports Russian, Byel
     <copyright>Copyright (c) 2002-2019 Ihar Yermalayeu,  Dmitry Borisov</copyright>
     <licenseUrl>https://github.com/ermig1979/AntiDupl/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
     <releaseNotes>[Release Notes](https://github.com/ermig1979/AntiDupl/releases)</releaseNotes>
-    <!--<docsUrl>https://github.com/ankurk91/google-chat-electron</docsUrl>-->
+    <docsUrl>https://ermig1979.github.io/AntiDupl/data/help/english/index.html</docsUrl>
     <bugTrackerUrl>https://github.com/ermig1979/AntiDupl/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/ermig1979/AntiDupl</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/antidupl</packageSourceUrl>
