@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1 -Skip 4)
 
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
@@ -24,6 +24,10 @@ function global:au_GetLatest {
     $url = $assets_page.Links.Href -match $re | Select-Object -First 2
 
     $version = $url[0] -split '/' | Select-Object -Last 1 -Skip 1
+    if ($version -ne '1.62.0')
+    {
+        throw "Wrong version found !! We want the version 1.62.0 but found the version $version"
+    }
     $url32 = 'https://github.com' + $url[0]
     $url64 = 'https://github.com' + $url[1]
 
