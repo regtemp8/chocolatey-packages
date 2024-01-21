@@ -19,7 +19,7 @@ It allows for blocking individual applications access to HID and XInput devices,
     <licenseUrl>https://github.com/ViGEm/HidHide/blob/master/LICENSE.rtf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>[Release Notes](https://github.com/ViGEm/HidHide/releases)</releaseNotes>
-    <docsUrl>https://vigem.org/projects/HidHide/API-Documentation/</docsUrl>
+    <docsUrl>https://docs.nefarius.at/projects/HidHide/API-Documentation//</docsUrl>
     <bugTrackerUrl>https://github.com/ViGEm/HidHide/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/ViGEm/HidHide</projectSourceUrl>
     <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/hidhide</packageSourceUrl>
