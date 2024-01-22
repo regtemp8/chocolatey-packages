@@ -40,6 +40,15 @@ DATABASE = {
         "emojis": "🖥️📱📞💬",
         "tags": ["telegram", "desktop", "windows"],
     },
+    "antidupl": {
+        "twitter_id": "",
+        "emojis": "🧑‍💻🖥️📋🔂",
+        "tags": [
+            "graphic",
+            "deduplication",
+            "image",
+        ],
+    },
     "arrowdl": {
         "twitter_id": "ArrowDLApp",
         "emojis": "🧑‍💻🖥️⬇️",
