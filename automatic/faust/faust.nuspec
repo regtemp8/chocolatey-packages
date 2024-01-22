@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>faust</id>
+    <title>Faust - Programming Language for Audio Applications and Plugins</title>
+    <version>2.70.0</version>
+    <authors>grame-cncm</authors>
+    <owners>Xav83</owners>
+    <summary>Functional programming language for signal processing and sound synthesis</summary>
+    <description>
+Faust (Functional Audio Stream) is a functional programming language specifically designed for real-time signal processing and synthesis. A distinctive characteristic of Faust is that it is fully compiled.
+
+The Faust compiler translates DSP specifications into very efficient code for various languages (C++, C, JAVA, LLVM IR, WebAssembly etc.) working at sample level. It targets high-performance signal processing applications, libraries, and audio plug-ins for a variety of audio platforms and standards. A same Faust specification can be used to easily generate various kinds of native standalone applications, iOS and Android apps, as well as Csound, LADSPA, Max/MSP, PD, Q, SuperCollider, VST, AU plugins, etc. (see the README in the /architecture folder for an exhaustive list).
+
+While there are Faust contributors everywhere across the globe, Faust is mainly being developed at Grame, Centre National de Creation Musicale (https://www.grame.fr), its birthplace.
+    </description>
+    <projectUrl>https://faust.grame.fr/</projectUrl>
+    <tags>audio c rust c-plus-plus csharp compiler cpp functional-programming julia dsp llvm dlang julia-language wasm faust jsfx jax cmajor rnbo</tags>
+    <iconUrl>https://rawcdn.githack.com/grame-cncm/faust/f0c79c111bda3280bd6c3937485eb7fbecd8f51e/build/package/faust-310x310.png</iconUrl>
+    <copyright>Copyright (C) 2003-2019 GRAME, Centre National de Creation Musicale.</copyright>
+    <licenseUrl>https://github.com/grame-cncm/faust/tree/master-dev#License-1-ov-file</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>[Releases Notes](https://github.com/grame-cncm/faust/releases)</releaseNotes>
+    <docsUrl>https://faustdoc.grame.fr/manual/quick-start/</docsUrl>
+    <bugTrackerUrl>https://github.com/grame-cncm/faust/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/grame-cncm/faust</projectSourceUrl>
+    <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/faust</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
