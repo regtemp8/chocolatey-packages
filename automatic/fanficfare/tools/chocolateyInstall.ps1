@@ -13,8 +13,6 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
-Get-ChocolateyWebFile @packageArgs
-
 if (Get-Command "calibre-customize.exe" -ErrorAction SilentlyContinue) {
   $pinfo                        = New-Object System.Diagnostics.ProcessStartInfo
   $pinfo.FileName               = "calibre-customize.exe"
