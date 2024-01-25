@@ -1,5 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
+$toolsDir = (Split-Path -parent $MyInvocation.MyCommand.Definition)
+
 if (Get-Command "calibre-customize.exe" -ErrorAction SilentlyContinue) {
   $pinfo                        = New-Object System.Diagnostics.ProcessStartInfo
   $pinfo.FileName               = "calibre-customize.exe"
