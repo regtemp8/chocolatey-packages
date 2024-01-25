@@ -20,7 +20,7 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "qrcp_.+_Windows_(x86_64|i386).tar.gz"
+    $re  = "qrcp_.+_windows_(amd64|386).tar.gz"
 
     $url = $assets_page.Links.Href -match $re | Select-Object -First 2
 
