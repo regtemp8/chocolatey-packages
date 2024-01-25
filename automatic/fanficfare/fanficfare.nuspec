@@ -16,7 +16,6 @@ FanFicFare was previously known as FanFictionDownLoader (AKA FFDL, AKA fanficdow
     </description>
     <projectUrl>https://github.com/JimmXinu/FanFicFare</projectUrl>
     <tags>python cli downloader ebook epub fanfiction calibre-plugin</tags>
-    <!--<iconUrl>https://rawcdn.githack.com/ankurk91/google-chat-electron/9a7f138f0994987775dd881ac33a5f35a72eeb93/resources/icons/normal/64.png</iconUrl>-->
     <copyright> Copyright (C) 2007 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://github.com/JimmXinu/FanFicFare/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
