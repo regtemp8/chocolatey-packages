@@ -157,6 +157,20 @@ DATABASE = {
         "emojis": "📰🔍🕵️👾",
         "tags": ["javascript", "css", "discord", "bookmark"],
     },
+    "fanficfare": {
+        "twitter_id": "",
+        "emojis": "🖥️📖📚🤓",
+        "tags": [
+            "python",
+            "cli",
+            "downloader",
+            "ebook",
+            "epub",
+            "fanfiction",
+            "calibre",
+            "calibreplugin",
+        ],
+    },
     "faust": {
         "twitter_id": "grame_lyon",
         "emojis": "🖥️🎹🎵🎶🎧",
