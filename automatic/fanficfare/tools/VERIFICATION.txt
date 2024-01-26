@@ -4,18 +4,18 @@ in verifying that this package's contents are trustworthy.
 
 The application has been dowloaded from the official distribution and can be verified by:
 
-1.  Go ta the binary distribution page: https://github.com/JimmXinu/FanFicFare/releases/tag/v4.27.0
-    , and download the archive "FanFicFarePlugin-v4.27.0.zip" using the relevant links in the asset section of the distribution page.
+1.  Go ta the binary distribution page: https://github.com/JimmXinu/FanFicFare/releases/tag/v4.30.0
+    , and download the archive "FanFicFarePlugin-v4.30.0.zip" using the relevant links in the asset section of the distribution page.
 
     You can also directly download the distribution directly from:
-        https://github.com/JimmXinu/FanFicFare/releases/download/v4.27.0/FanFicFarePlugin-v4.27.0.zip
+        https://github.com/JimmXinu/FanFicFare/releases/download/v4.30.0/FanFicFarePlugin-v4.30.0.zip
 
 2. The archive can be validated by comparing checksums:
-    - Use powershell function 'Get-Filehash': Get-Filehash FanFicFarePlugin-v4.27.0.zip
-    - Use choclatey utility 'checksum.exe': checksum -t sha256 -f FanFicFarePlugin-v4.27.0.zip
+    - Use powershell function 'Get-Filehash': Get-Filehash FanFicFarePlugin-v4.30.0.zip
+    - Use choclatey utility 'checksum.exe': checksum -t sha256 -f FanFicFarePlugin-v4.30.0.zip
 
     Algorithm       Hash                                                                   Path
     ---------       ----                                                                   ----
-    SHA256          1083A57456000EF3496B8AEFBFC2A8713C00BCEDAF88238CE8710C27E3E94822       C:\Users\Utilisateur\Downloads\FanFicFarePlugin-v4.27.0.zip
+    SHA256          CE304C37AE03268B3252FAD825AC9934EC5DF1080869A3CA76B7FEF17A16A9A2       C:\Users\Utilisateur\Downloads\FanFicFarePlugin-v4.30.0.zip
 
 The content of the file "LICENCE.txt" is obtained from https://github.com/JimmXinu/FanFicFare/blob/main/LICENSE .
