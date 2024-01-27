@@ -222,6 +222,19 @@ DATABASE = {
             "cloudstorage",
         ],
     },
+    "magpie": {
+        "twitter_id": "",
+        "emojis": "🧑‍💻🖥️🔍🕵️",
+        "tags": [
+            "capture",
+            "hlsl",
+            "superresolution",
+            "magnifier",
+            "cppwinrt",
+            "fsr",
+            "anime4k",
+        ],
+    },
     "openproject": {
         "twitter_id": "openproject",
         "emojis": "🖥️🕒🗓️⏳",
