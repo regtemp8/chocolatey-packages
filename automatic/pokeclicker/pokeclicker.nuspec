@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>pokeclicker</id>
+    <title>PokeClicker</title>
+    <version>1.2.0</version>
+    <authors>RedSparr0w</authors>
+    <owners>Xav83</owners>
+    <summary>A web wrapper for PokeClicker.</summary>
+    <description>
+A game about catching Pokémon, defeating gym leaders, and watching numbers get bigger.
+
+You can try out the current state at https://www.pokeclicker.com/
+
+You can reach out on discord to discuss your ideas and how to implement them: https://discord.gg/a6DFe4p
+    </description>
+    <projectUrl>https://www.pokeclicker.com</projectUrl>
+    <tags>javascript game hacktoberfest pokemon fangame</tags>
+    <iconUrl>https://rawcdn.githack.com/pokeclicker/pokeclicker/8ff2820f3672f316748dc3fbec4f5590d92ee3c7/src/assets/images/pokeclickerlogo.png</iconUrl>
+    <copyright></copyright>
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>[Package Changelog](https://github.com/pokeclicker/pokeclicker/releases)</releaseNotes>
+    <docsUrl>https://wiki.pokeclicker.com/#!/</docsUrl>
+    <bugTrackerUrl>https://github.com/pokeclicker/pokeclicker/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/pokeclicker/pokeclicker</projectSourceUrl>
+    <packageSourceUrl>https://github.com/Xav83/chocolatey-packages/tree/develop/automatic/pokeclicker</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
