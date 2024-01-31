@@ -235,6 +235,29 @@ DATABASE = {
             "anime4k",
         ],
     },
+    "mgba": {
+        "twitter_id": "mGBA_emu",
+        "emojis": "🖥️🎮🕹️👾",
+        "tags": [
+            "mgba",
+            "gba",
+            "gameboy",
+            "emulator",
+            "gameboyadvance",
+            "gameboycolor",
+        ],
+    },
+    "monitorian": {
+        "twitter_id": "",
+        "emojis": "🧑‍💻🖥️🔆🕶️",
+        "tags": [
+            "monitor",
+            "display",
+            "brightness",
+            "luminance",
+            "ddcci",
+        ],
+    },
     "openproject": {
         "twitter_id": "openproject",
         "emojis": "🖥️🕒🗓️⏳",
@@ -269,29 +292,6 @@ DATABASE = {
             "discord",
             "twitch",
             "bot",
-        ],
-    },
-    "mgba": {
-        "twitter_id": "mGBA_emu",
-        "emojis": "🖥️🎮🕹️👾",
-        "tags": [
-            "mgba",
-            "gba",
-            "gameboy",
-            "emulator",
-            "gameboyadvance",
-            "gameboycolor",
-        ],
-    },
-    "monitorian": {
-        "twitter_id": "",
-        "emojis": "🧑‍💻🖥️🔆🕶️",
-        "tags": [
-            "monitor",
-            "display",
-            "brightness",
-            "luminance",
-            "ddcci",
         ],
     },
     "rare": {
