@@ -294,6 +294,17 @@ DATABASE = {
             "bot",
         ],
     },
+    "qrcp": {
+        "twitter_id": "qrcp_dev",
+        "emojis": "🖥️🧑‍💻⤵️",
+        "tags": [
+            "cli",
+            "golang",
+            "utility",
+            "commandline",
+            "qrcode",
+        ],
+    },
     "rare": {
         "twitter_id": "legendary_gl",
         "emojis": "🎮🕹️👾",
