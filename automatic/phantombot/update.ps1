@@ -18,10 +18,10 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "PhantomBot.+-win\.zip$"
+    $re  = "PhantomBot-.+-win\.zip$"
     $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = $url -split '/' -replace 'v','' | Select-Object -Last 1 -Skip 1
+    $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
     $url32 = 'https://github.com' + $url
 
     $Latest = @{ URL32 = $url32; Version = $version }
