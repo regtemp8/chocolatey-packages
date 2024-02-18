@@ -40,6 +40,18 @@ DATABASE = {
         "emojis": "🖥️📱📞💬",
         "tags": ["telegram", "desktop", "windows"],
     },
+    "aemulusmodmanager": {
+        "twitter_id": "",
+        "emojis": "🧑‍💻🖥️🎮🕹️👾",
+        "tags": [
+            "mod",
+            "package",
+            "manager",
+            "persona",
+            "pc",
+            "windows",
+        ],
+    },
     "antidupl": {
         "twitter_id": "",
         "emojis": "🧑‍💻🖥️📋🔂",
