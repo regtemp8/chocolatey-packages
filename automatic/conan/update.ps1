@@ -20,12 +20,12 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "conan-win-(32|64).exe"
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
+    $re  = "conan-.+-windows-x86_64-installer.exe"
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
-    $version = $url[0] -split '/' | Select-Object -Last 1 -Skip 1
-    $url32 = 'https://github.com' + $url[0]
-    $url64 = 'https://github.com' + $url[1]
+    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
+    $url32 = 'https://github.com' + $url
+    $url64 = 'https://github.com' + $url
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
