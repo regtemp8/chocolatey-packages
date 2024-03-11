@@ -234,6 +234,21 @@ DATABASE = {
             "cloudstorage",
         ],
     },
+    "keepassxc-legacy": {
+        "twitter_id": "KeePassXC",
+        "emojis": "🧑‍💻🖥️✅🔑🔒",
+        "tags": [
+            "windows",
+            "security",
+            "privacy",
+            "crossplatform",
+            "manager",
+            "yubikey",
+            "password",
+            "keepass",
+            "keepassxc",
+        ],
+    },
     "magpie": {
         "twitter_id": "",
         "emojis": "🧑‍💻🖥️🔍🕵️",
