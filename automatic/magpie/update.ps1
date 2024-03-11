@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "Magpie-v.+-x64.zip" 
+    $re  = "Magpie-.+-x64.zip"
 
     $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
