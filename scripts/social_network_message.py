@@ -169,6 +169,11 @@ DATABASE = {
         "emojis": "📰🔍🕵️👾",
         "tags": ["javascript", "css", "discord", "bookmark"],
     },
+    "dosbox-x": {
+        "twitter_id": "greatcodeholio",
+        "emojis": "🖥️🎮🕹️👾",
+        "tags": ["dosbox", "dos", "emulator"],
+    },
     "fanficfare": {
         "twitter_id": "",
         "emojis": "🖥️📖📚🤓",
