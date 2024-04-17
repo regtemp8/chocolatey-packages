@@ -337,6 +337,13 @@ DATABASE = {
             "qrcode",
         ],
     },
+    "steam-rom-manager": {
+        "twitter_id": "SteamGridDB",
+        "emojis": "🖥️🎮🕹️👾",
+        "tags": [
+            "rom", "steam", "videogame", "games", "gaming"
+        ],
+    },
     "rare": {
         "twitter_id": "legendary_gl",
         "emojis": "🎮🕹️👾",
