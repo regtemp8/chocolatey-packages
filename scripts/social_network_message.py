@@ -238,6 +238,18 @@ DATABASE = {
             "gaming",
         ],
     },
+    "hopsan": {
+        "twitter_id": "liu_universitet",
+        "emojis": "🧑‍💻🖥️",
+        "tags": [
+            "cpp",
+            "fmi",
+            "hydraulics",
+            "transmissionline",
+            "simulation",
+            "modeling",
+        ],
+    },
     "internxt-drive": {
         "twitter_id": "Internxt",
         "emojis": "🧑‍💻🖥️🪙",
