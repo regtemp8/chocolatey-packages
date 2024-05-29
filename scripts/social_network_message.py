@@ -95,6 +95,20 @@ DATABASE = {
             "i2p",
         ],
     },
+    "cairoshell": {
+        "twitter_id": "cairoshell",
+        "emojis": "🧑‍💻🖥️",
+        "tags": [
+            "shell",
+            "csharp",
+            "launcher",
+            "windows",
+            "task",
+            "manager",
+            "desktop",
+            "environment",
+        ],
+    },
     "ccache": {
         "twitter_id": "",
         "emojis": "🧑‍💻🖥️",
@@ -340,9 +354,7 @@ DATABASE = {
     "steam-rom-manager": {
         "twitter_id": "SteamGridDB",
         "emojis": "🖥️🎮🕹️👾",
-        "tags": [
-            "rom", "steam", "videogame", "games", "gaming"
-        ],
+        "tags": ["rom", "steam", "videogame", "games", "gaming"],
     },
     "rare": {
         "twitter_id": "legendary_gl",
