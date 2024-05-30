@@ -23,6 +23,11 @@ function global:au_GetLatest {
     $url = $assets_page.Links.Href -match $re | Select-Object -First 1
 
     $version = ($url -split '/' | Select-Object -Last 1 -Skip 1) -replace 'v',''
+    $charCount = ($version.ToCharArray() | Where-Object {$_ -eq '.'} | Measure-Object).Count
+    if ($charCount -eq 1)
+    {
+        $version = $version + ".0"
+    }
     $url64 = 'https://github.com' + $url
 
     $Latest = @{ URL64 = $url64; Version = $version }
