@@ -20,6 +20,11 @@ function global:au_GetLatest {
     $url = $download_page.links | Where-Object href -match $re | Select-Object -First 2 -expand href
 
     $version = $url[0] -split '/' -replace 'v','' | Select-Object -Last 1 -Skip 1
+    $charCount = ($version.ToCharArray() | Where-Object {$_ -eq '.'} | Measure-Object).Count
+    if ($charCount -eq 1)
+    {
+        $version = $version + ".0"
+    }
     $url32 = $url[0]
     $url64 = $url[1]
 
