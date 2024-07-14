@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import argparse
+from twitter.account import Account
 
+import argparse
+import datetime
+import os
 
 message_for_one_version = """
 The latest version ({}) of #{} {}is now available on @chocolateynuget {}
@@ -448,6 +451,9 @@ class Package:
             self.version, self.name, self.twitter_id, self.emojis, self.tags, self.url
         )
 
+    def to_string(self):
+        return self.__str__()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -470,5 +476,34 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    p = Package(args.package[0], args.version)
-    print(p)
+    message = Package(args.package[0], args.version)
+
+    if not os.path.isfile("twitter_ids.cookies"):
+        print(
+            """Error: File 'twitter_ids.cookies' not found.
+            You may want to generate it with the script 'scraper_twitter_ids.py'.
+            """
+        )
+        exit(1)
+
+    account = Account(cookies="twitter_ids.cookies")
+    scheduled_tweets = account.scheduled_tweets()["data"]["viewer"][
+        "scheduled_tweet_list"
+    ]
+
+    if scheduled_tweets:
+        further_away_tweet = max(
+            scheduled_tweets, key=lambda tweet: tweet["scheduling_info"]["execute_at"]
+        )
+        further_away_tweet_date = datetime.datetime.fromtimestamp(
+            further_away_tweet["scheduling_info"]["execute_at"] / 1000,
+            tz=datetime.timezone.utc,
+        )
+        new_tweet_date = further_away_tweet_date + datetime.timedelta(days=1)
+    else:
+        new_tweet_date = datetime.datetime.now() + datetime.timedelta(days=1)
+
+    new_tweet_date = new_tweet_date.replace(hour=6, minute=30, second=0, microsecond=0)
+    account.schedule_tweet(
+        message.to_string(), new_tweet_date.strftime("%Y-%m-%d %H:%M")
+    )
