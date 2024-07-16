@@ -6,15 +6,13 @@ import argparse
 import datetime
 import os
 
-message_for_one_version = """
-The latest version ({}) of #{} {}is now available on @chocolateynuget {}
+message_for_one_version = """The latest version ({}) of #{} {}is now available on @chocolateynuget {}
 
 {} #chocolatey
 {}
 """
 
-message_for_several_versions = """
-The latest versions ({}) of #{} {}are now available on @chocolateynuget {}
+message_for_several_versions = """The latest versions ({}) of #{} {}are now available on @chocolateynuget {}
 
 {} #chocolatey
 {}
@@ -491,9 +489,16 @@ if __name__ == "__main__":
         "scheduled_tweet_list"
     ]
 
-    if scheduled_tweets:
+    chocolatey_scheduled_tweet = (
+        x
+        for x in scheduled_tweets
+        if "#chocolatey" in x["tweet_create_request"]["status"]
+    )
+
+    if chocolatey_scheduled_tweet:
         further_away_tweet = max(
-            scheduled_tweets, key=lambda tweet: tweet["scheduling_info"]["execute_at"]
+            chocolatey_scheduled_tweet,
+            key=lambda tweet: tweet["scheduling_info"]["execute_at"],
         )
         further_away_tweet_date = datetime.datetime.fromtimestamp(
             further_away_tweet["scheduling_info"]["execute_at"] / 1000,
