@@ -512,3 +512,4 @@ if __name__ == "__main__":
     account.schedule_tweet(
         message.to_string(), new_tweet_date.strftime("%Y-%m-%d %H:%M")
     )
+    print(f"Tweet scheduled on {new_tweet_date.strftime('%Y-%m-%d %H:%M')}")
