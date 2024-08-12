@@ -413,7 +413,18 @@ DATABASE = {
             "taskmanager",
             "hacktoberfest",
             "timetracking",
-            "hacktoberfest2021",
+        ],
+    },
+    "switchhosts": {
+        "twitter_id": "switchhosts",
+        "emojis": "🧑‍💻🖥️",
+        "tags": [
+            "electron",
+            "hosts",
+            "hostsfile",
+            "hostseditor",
+            "switch-hosts",
+            "switchhosts",
         ],
     },
 }
