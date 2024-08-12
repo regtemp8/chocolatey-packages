@@ -500,13 +500,12 @@ if __name__ == "__main__":
         "scheduled_tweet_list"
     ]
 
-    chocolatey_scheduled_tweet = (
-        x
-        for x in scheduled_tweets
-        if "#chocolatey" in x["tweet_create_request"]["status"]
-    )
-
-    if chocolatey_scheduled_tweet:
+    if len(scheduled_tweets) != 0:
+        chocolatey_scheduled_tweet = (
+            x
+            for x in scheduled_tweets
+            if "#chocolatey" in x["tweet_create_request"]["status"]
+        )
         further_away_tweet = max(
             chocolatey_scheduled_tweet,
             key=lambda tweet: tweet["scheduling_info"]["execute_at"],
