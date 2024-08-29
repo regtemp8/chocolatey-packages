@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $releases = 'https://github.com/farag2/Sophia-Script-for-Windows/releases'
 

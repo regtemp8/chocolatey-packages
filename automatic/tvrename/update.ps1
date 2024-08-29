@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $releases = 'https://github.com/TV-Rename/tvrename/releases'
 function global:au_SearchReplace {

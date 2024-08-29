@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $releases = 'https://github.com/Suwayomi/Tachidesk-JUI/releases'
 

@@ -37,7 +37,7 @@ For setting up your own automatic package repository, please see [Automatic Pack
 * PowerShell v5+.
 * The [AU module](https://chocolatey.org/packages/au).
 
-For daily operations check out the AU packages [template README](https://github.com/majkinetor/au-packages-template/blob/master/README.md).
+For daily operations check out the AU packages [template README](https://github.com/chocolatey-community/chocolatey-au-packages-template/blob/master/README.md).
 
 ### Getting started
 
@@ -75,7 +75,7 @@ The way this source repository is designed, you can use both AU and Ketarin/Choc
 
 ### Migrating existing Ketarin packages to AU
 
-1. Add an update.ps1 to the package folder and determine how to update the package using [AU's instructions](https://github.com/majkinetor/au#creating-the-package-updater-script).
+1. Add an update.ps1 to the package folder and determine how to update the package using [AU's instructions](https://github.com/chocolatey-community/chocolatey-au#creating-the-package-updater-script).
 1. Remove the ketarin.xml file from the ketarin folder.
 1. Ensure you also remove the package job from Ketarin itself as it doesn't automatically remove.
 

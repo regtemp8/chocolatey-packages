@@ -1,4 +1,4 @@
-# AU template: https://github.com/majkinetor/au-packages-template
+# AU template: https://github.com/chocolatey-community/chocolatey-au-packages-template
 
 version: '{build}'
 pull_requests:
@@ -58,7 +58,7 @@ install:
 - ps: $PSVersionTable
 - git --version
 - ps: |
-    git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
+    git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
 - ps: |
