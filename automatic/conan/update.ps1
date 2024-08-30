@@ -15,17 +15,18 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1)
+    $release_tag_url = "https://github.com" + ($releases_page.Links.Href -match "/tag/" | Select-Object -First 1 -Skip 8)
 
     $expanded_assets_url = $release_tag_url -replace "/tag/","/expanded_assets/"
     $assets_page = Invoke-WebRequest -Uri $expanded_assets_url -UseBasicParsing
 
-    $re  = "conan-.+-windows-x86_64-installer.exe"
-    $url = $assets_page.Links.Href -match $re | Select-Object -First 1
+    $re  = "conan-win-(32|64).exe"
+    $url = $assets_page.Links.Href -match $re | Select-Object -First 2
 
-    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
-    $url32 = 'https://github.com' + $url
-    $url64 = 'https://github.com' + $url
+    $version = $url[0] -split '/' | Select-Object -Last 1 -Skip 1
+
+    $url32 = 'https://github.com' + $url[0]
+    $url64 = 'https://github.com' + $url[1]
 
     $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
     return $Latest
