@@ -233,27 +233,31 @@ DATABASE = {
     "doxybook2": {
         "twitter_id": "",
         "emojis": "🧑‍💻🖥️️",
-        "tags": ["mkdocs",
-                 "gitbook",
-                 "vuepress",
-                 "hugobook",
-                 "doxygen",
-                 "documentation",
-                 "generator",
-                 "markdown"],
+        "tags": [
+            "mkdocs",
+            "gitbook",
+            "vuepress",
+            "hugobook",
+            "doxygen",
+            "documentation",
+            "generator",
+            "markdown",
+        ],
     },
     "downzemall": {
         "twitter_id": "ArrowDLApp",
         "emojis": "🧑‍💻🖥️⬇️",
-        "tags": ["crawler",
-                 "streaming",
-                 "download",
-                 "video",
-                 "webextensions",
-                 "magnet",
-                 "torrent",
-                 "firefox",
-                 "nativeclient"],
+        "tags": [
+            "crawler",
+            "streaming",
+            "download",
+            "video",
+            "webextensions",
+            "magnet",
+            "torrent",
+            "firefox",
+            "nativeclient",
+        ],
     },
     "fanficfare": {
         "twitter_id": "",
@@ -660,7 +664,7 @@ if __name__ == "__main__":
         new_tweet_date = datetime.datetime.now() + datetime.timedelta(days=1)
 
     new_tweet_date = new_tweet_date.replace(hour=6, minute=30, second=0, microsecond=0)
-    scheduling_result= account.schedule_tweet(
+    scheduling_result = account.schedule_tweet(
         message.to_string(), new_tweet_date.strftime("%Y-%m-%d %H:%M")
     )
     if "errors" in scheduling_result:
