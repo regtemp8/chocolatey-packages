@@ -8,12 +8,12 @@ parser = ArgumentParser(
 )
 
 parser.add_argument(
-    "email", metavar="package", type=str, nargs=1, help="email of the Twitter account"
+    "email", metavar="email", type=str, nargs=1, help="email of the Twitter account"
 )
 
 parser.add_argument(
     "username",
-    metavar="package",
+    metavar="username",
     type=str,
     nargs=1,
     help="username of the Twitter account",
@@ -21,7 +21,7 @@ parser.add_argument(
 
 parser.add_argument(
     "password",
-    metavar="package",
+    metavar="password",
     type=str,
     nargs=1,
     help="password of the Twitter account",
