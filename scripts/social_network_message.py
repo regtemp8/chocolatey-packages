@@ -519,7 +519,10 @@ if __name__ == "__main__":
         new_tweet_date = datetime.datetime.now() + datetime.timedelta(days=1)
 
     new_tweet_date = new_tweet_date.replace(hour=6, minute=30, second=0, microsecond=0)
-    account.schedule_tweet(
+    scheduling_result= account.schedule_tweet(
         message.to_string(), new_tweet_date.strftime("%Y-%m-%d %H:%M")
     )
-    print(f"Tweet scheduled on {new_tweet_date.strftime('%Y-%m-%d %H:%M')}")
+    if "errors" in scheduling_result:
+        print(f"There has been an issue when sheduling the tweet:\n{scheduling_result}")
+    else:
+        print(f"Tweet scheduled on {new_tweet_date.strftime('%Y-%m-%d %H:%M')}")
